@@ -1,0 +1,221 @@
+/* 
+  Custom Styles for Dink & Drive
+  Extending Bootstrap 5 with premium dark mode and user-requested colors
+*/
+
+/* Core Color Palette:
+   Black: #0B0F19
+   Neon Green: #39FF14
+   Electric Blue: #00BFFF
+   Light Gray: #E5E7EB
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --neon-green: #39FF14;
+  --dark-black: #0B0F19;
+  --electric-blue: #00BFFF;
+  --light-gray: #E5E7EB;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-black) !important;
+  color: var(--light-gray) !important;
+}
+
+/* Overriding Bootstrap Utilities to match our new palette */
+.bg-dark {
+  background-color: var(--dark-black) !important;
+}
+
+.text-light {
+  color: var(--light-gray) !important;
+}
+
+.text-warning {
+  color: var(--neon-green) !important;
+}
+
+/* Slightly brighten Bootstrap's text-muted to remain legible on deep black */
+.text-muted {
+  color: #9ca3af !important; 
+}
+
+.btn-warning {
+  background-color: var(--neon-green) !important;
+  border-color: var(--neon-green) !important;
+  color: var(--dark-black) !important;
+}
+
+.btn-warning:hover {
+  background-color: #32e612 !important;
+  border-color: #32e612 !important;
+  color: var(--dark-black) !important;
+}
+
+.btn-outline-warning {
+  color: var(--neon-green) !important;
+  border-color: var(--neon-green) !important;
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--neon-green) !important;
+  color: var(--dark-black) !important;
+}
+
+.btn-outline-light {
+  color: var(--light-gray) !important;
+  border-color: var(--light-gray) !important;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--electric-blue) !important;
+  border-color: var(--electric-blue) !important;
+  color: #fff !important;
+}
+
+.bg-secondary {
+  /* Using a slightly lighter shade than the core black for cards to stand out */
+  background-color: #111c2a !important; 
+}
+
+/* Navbar Enhancements */
+.navbar {
+  background-color: rgba(11, 15, 25, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--electric-blue) !important; /* Electric blue trim */
+}
+
+.navbar-nav .nav-link {
+  color: var(--light-gray) !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link.active {
+  color: var(--neon-green) !important;
+}
+
+/* Hero Section & Video Background */
+.hero-section {
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid var(--neon-green);
+}
+
+.hero-video-element {
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  background-color: rgba(11, 15, 25, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+/* Feature Images */
+.section-img {
+  object-fit: cover;
+  height: 300px;
+}
+
+/* Feature Cards */
+.feature-card {
+  border: 1px solid #1a253c !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 191, 255, 0.2) !important; /* electric blue shadow */
+  border-color: var(--electric-blue) !important;
+}
+
+.feature-card .card-text {
+  color: var(--light-gray);
+  opacity: 0.9;
+}
+
+/* Footer Link Hovers */
+.footer-link {
+  color: var(--light-gray) !important;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--neon-green) !important;
+  transform: translateX(5px);
+}
+
+/* Newsletter Input styling to fit in */
+.form-control {
+  background-color: #111c2a !important;
+  border-color: #1a253c !important;
+  color: var(--light-gray) !important;
+}
+
+.form-control:focus {
+  background-color: #111c2a !important;
+  border-color: var(--electric-blue) !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 191, 255, 0.25) !important;
+  color: var(--light-gray) !important;
+}
+
+.form-control::placeholder {
+  color: #6b7280 !important;
+}
+
+/* --- Media Queries for Responsive Design --- */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 50vh;
+  }
+  
+  .display-3 {
+    font-size: 2.5rem !important; /* Scale down hero text */
+  }
+  
+  .section-img {
+    height: 200px; /* Scale down feature images for tablets and smaller */
+  }
+}
+
+/* --- Media Queries for Print Displays --- */
+@media print {
+  /* Save ink by converting dark backgrounds to white and text to black */
+  body, .bg-dark, .bg-secondary, .feature-card, .navbar, footer, .hero-section {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #000 !important;
+  }
+  
+  .text-light, .text-muted, .text-warning {
+    color: #000 !important;
+  }
+  
+  /* Hide non-printable/unnecessary elements */
+  .hero-video-element, .hero-overlay, .btn {
+    display: none !important;
+  }
+  
+  .feature-card {
+    border: 1px solid #777 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  
+  .hero-section {
+    border-bottom: 2px solid #000 !important;
+  }
+}
