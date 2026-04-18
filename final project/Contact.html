@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto fw-semibold">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Rules.html">Rules/Basics</a>
@@ -41,7 +41,7 @@
                         <a class="nav-link" href="Events.html">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Contact.html">Contact</a>
+                        <a class="nav-link active text-light" aria-current="page" href="Contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -63,52 +63,44 @@
 
         <!-- Hero Content -->
         <div class="container py-5 position-relative hero-content">
-            <h1 class="display-3 fw-bold mb-4">Welcome to <span class="text-warning">Dink & Drive</span></h1>
-            <a href="Rules.html" class="btn btn-warning btn-lg px-5 shadow-sm rounded-pill fw-bold">Get Started</a>
+            <h1 class="display-3 fw-bold mb-4">Contact <span class="text-warning">Us</span></h1>
         </div>
     </header>
 
     <!-- Main Content Areas -->
     <main class="container my-5 flex-grow-1">
 
-        <!-- About Section -->
-        <section class="row align-items-center mb-5 feature-card rounded-4 p-4 p-md-5 mx-0">
-            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                <!-- About Image -->
-                <img src="img/pickleball.jpg" alt="About Pickleball"
-                    class="img-fluid rounded-3 shadow-sm w-100 section-img">
-            </div>
-            <div class="col-md-6 order-md-1">
-                <h2 class="text-warning fw-bold mb-3">About Pickleball</h2>
-                <p class="lead text-light">Pickleball is a fun, fast-paced game that combines
-                    elements of tennis, badminton, and ping-pong. Whether you are a beginner looking to pick up a paddle
-                    or an intermediate player aiming to refine your skills, Dink & Drive is your community hub to learn,
-                    play, and connect.</p>
+        <section class="row justify-content-center feature-card rounded-4 p-4 p-md-5 mx-0 mb-5">
+            <div class="col-md-8 col-lg-6">
+                <h2 class="text-warning fw-bold mb-4 text-center">Get in Touch</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label text-light fw-semibold">Name</label>
+                        <input type="text" class="form-control bg-dark text-light border-secondary" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-light fw-semibold">Email</label>
+                        <input type="email" class="form-control bg-dark text-light border-secondary" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label text-light fw-semibold">Message</label>
+                        <textarea class="form-control bg-dark text-light border-secondary" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-warning btn-lg fw-bold rounded-pill">Submit Message</button>
+                    </div>
+                </form>
             </div>
         </section>
 
-        <!-- Quick Links Row -->
-        <section class="mb-5 text-center">
+        <!-- Social Links Section -->
+        <section class="text-center">
+            <h3 class="text-light mb-4 fw-semibold">Connect with us on Social Media</h3>
             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="Rules.html" class="btn btn-outline-light btn-lg px-5 rounded-pill fw-semibold">Learn</a>
-                <a href="Equipment.html" class="btn btn-outline-light btn-lg px-5 rounded-pill fw-semibold">Gear</a>
-                <a href="Courts.html" class="btn btn-outline-light btn-lg px-5 rounded-pill fw-semibold">Courts</a>
-                <a href="Events.html" class="btn btn-outline-light btn-lg px-5 rounded-pill fw-semibold">Events</a>
-            </div>
-        </section>
-
-        <!-- Featured Section -->
-        <section class="row align-items-center feature-card rounded-4 p-4 p-md-5 mx-0">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <!-- Featured Image -->
-                <img src="img/new_gear.png" alt="Featured Gear Review"
-                    class="img-fluid rounded-3 shadow-sm w-100 section-img">
-            </div>
-            <div class="col-md-6">
-                <h2 class="text-warning fw-bold mb-3">Featured Spotlight</h2>
-                <p class="lead mb-4 text-light">Check out our latest gear review or upcoming
-                    local tournament! Stay ahead of the competition and never miss out on the action.</p>
-                <a href="Equipment.html" class="btn btn-warning px-4 py-2 rounded-pill fw-bold">Read More</a>
+                <a href="#" class="btn btn-outline-warning rounded-pill px-4 fw-semibold">Facebook</a>
+                <a href="#" class="btn btn-outline-warning rounded-pill px-4 fw-semibold">Twitter / X</a>
+                <a href="#" class="btn btn-outline-warning rounded-pill px-4 fw-semibold">Instagram</a>
+                <a href="#" class="btn btn-outline-warning rounded-pill px-4 fw-semibold">YouTube</a>
             </div>
         </section>
 
